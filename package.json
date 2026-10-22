@@ -1,0 +1,32 @@
+{
+  "name": "graphing-calculator",
+  "productName": "Graphing Calculator",
+  "version": "1.0.0",
+  "description": "A simple, lightweight graphing calculator with sliders and themes",
+  "main": "main.js",
+  "author": "Your Name <you@example.com>",
+  "homepage": "https://github.com/YOUR-USERNAME/graphing-calculator",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --publish never",
+    "dist:win": "electron-builder --win --publish never",
+    "dist:linux": "electron-builder --linux --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.example.graphingcalculator",
+    "productName": "Graphing Calculator",
+    "files": ["main.js", "src/**/*"],
+    "directories": { "output": "dist" },
+    "win": { "target": ["nsis", "portable"] },
+    "nsis": { "artifactName": "graphing-calculator-setup-${version}.${ext}" },
+    "portable": { "artifactName": "graphing-calculator-portable-${version}.${ext}" },
+    "linux": { "target": ["AppImage", "deb"], "category": "Education", "maintainer": "Your Name <you@example.com>" },
+    "appImage": { "artifactName": "graphing-calculator-${version}.${ext}" },
+    "deb": { "artifactName": "graphing-calculator-${version}.${ext}" }
+  }
+}
