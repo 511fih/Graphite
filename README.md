@@ -3,7 +3,6 @@
 A simple, lightweight graphing calculator. Plot up to six functions, drag sliders for variables like `a` and `b`, and pick a theme (Auto, Paper, Midnight, Forest, Graphite).
 
 - Drag to pan, scroll or pinch to zoom, hover to trace values.
-- `2x`, `3sin(x)` and `a*sin(b*x)` all work; pasted notation like `y = x²` or `\frac{1}{x}` is understood.
 - The Insert function button opens a palette that inserts into the selected box.
 
 ## Run in a browser
